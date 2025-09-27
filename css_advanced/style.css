@@ -1,27 +1,42 @@
-body {
-    background-image: url('CSS Advanced/Object.png');
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    background-image: url('images/Object.png');
+    background-position: top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ===== HEADER STYLES ===== */
 header {
     margin-top: 20px;
-    position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 #image {
     margin-left: 30px;
+    max-width: 100px;
+    height: auto;
 }
 
 .links {
     color: orange;
     margin-right: 20px;
-    padding: 20px;
+    padding: 15px;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .links::after {
@@ -34,35 +49,49 @@ header {
     border-radius: 40px;
 }
 
+/* ===== HERO SECTION ===== */
 .front {
     margin-top: 0px;
+    padding: 0 20px;
 }
 
 #heading {
-    margin-top: 150px;
-    font-size: 100px;
+    margin-top: 100px;
+    font-size: clamp(2.5rem, 8vw, 100px);
     color: white;
-
+    line-height: 1.2;
 }
 
 .span {
-    margin-top: -3000px;
-    padding: 10px;
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
     color: white;
 }
 
 button {
     background-color: purple;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 30px;
+    padding: 15px 30px;
     border-radius: 30px;
-    border-color: purple;
+    border: 2px solid purple;
     color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
 }
 
+button:hover {
+    background-color: #6a0dad;
+    border-color: #6a0dad;
+}
+
+/* ===== MEMORIES SECTION ===== */
 .memories {
     color: white;
-    margin-top: 150px;
+    margin-top: 100px;
+    padding: 0 20px;
 }
 
 .learn-text {
@@ -71,52 +100,289 @@ button {
 }
 
 .memories-list {
-    color: white;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
 }
 
+.memories-list div {
+    text-align: center;
+}
+
+.memories-list img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.memories-list h1 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+}
+
+/* ===== PRESENTER SECTION ===== */
 .presenter {
     color: white;
     background-color: purple;
-    width: 100vw; /* Use viewport width instead of percentage */
-    margin-left: calc(-50vw + 50%); /* This pulls it to the full left edge */
-    position: relative;
-    left: 0;
     display: flex;
     justify-content: center;
-    padding: 20px 0; /* Add some vertical padding */
+    align-items: center;
+    padding: 60px 20px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.presenter img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
 }
 
 .quote-position {
     text-align: left;
-    margin-left: 50px;
+    max-width: 500px;
 }
 
+.quote-position p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.quote-position h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* ===== TUTORIALS SECTION ===== */
 .most-popular-tutorial-section {
     background-color: white;
-    background-size: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+    padding: 80px 0;
+    width: 100%;
 }
 
 .turorials {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.turorials h2 {
     font-style: italic;
-    font-weight: lighter;
+    font-weight: 300;
+    font-size: 2.5rem;
 }
 
 .popular-tutorials {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .popular-tutorials-box {
-    border: 1px solid white;
-    padding: 15px;
+    border: 1px solid #e0e0e0;
+    padding: 25px;
     text-align: left;
-    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.popular-tutorials-box:hover {
+    transform: translateY(-5px);
+}
+
+.popular-tutorials-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.popular-tutorials-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.popular-tutorials-box p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Tablet Styles (768px - 1024px) */
+@media (max-width: 1024px) {
+    .memories-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
     
+    #heading {
+        margin-top: 80px;
+        font-size: clamp(2rem, 6vw, 80px);
+    }
+    
+    .presenter {
+        padding: 50px 20px;
+        gap: 30px;
+    }
+}
+
+/* Mobile Styles (481px - 767px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    #image {
+        margin-left: 0;
+    }
+    
+    .links {
+        margin: 5px 10px;
+        padding: 12px 20px;
+        display: inline-block;
+    }
+    
+    #heading {
+        margin-top: 60px;
+        font-size: clamp(1.8rem, 5vw, 60px);
+    }
+    
+    .span {
+        display: block;
+        margin: 15px 0;
+    }
+    
+    .memories-list {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 400px;
+    }
+    
+    .presenter {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    .quote-position {
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    .popular-tutorials {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    button {
+        width: 90%;
+        max-width: 300px;
+        padding: 12px 25px;
+    }
+}
+
+/* Small Mobile Styles (320px - 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 0 15px;
+    }
+    
+    .links {
+        margin: 3px 5px;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    #heading {
+        margin-top: 40px;
+        font-size: 2rem;
+    }
+    
+    .front {
+        padding: 0 15px;
+    }
+    
+    .memories {
+        margin-top: 60px;
+        padding: 0 15px;
+    }
+    
+    .memories-list {
+        padding: 0 15px;
+        gap: 25px;
+    }
+    
+    .memories-list img {
+        max-width: 120px;
+    }
+    
+    .presenter {
+        padding: 30px 15px;
+    }
+    
+    .presenter img {
+        max-width: 150px;
+    }
+    
+    .most-popular-tutorial-section {
+        padding: 50px 0;
+    }
+    
+    .turorials h2 {
+        font-size: 2rem;
+    }
+    
+    .popular-tutorials {
+        padding: 0 15px;
+        gap: 20px;
+    }
+    
+    .popular-tutorials-box {
+        padding: 20px;
+    }
+}
+
+/* Large Desktop Styles (1200px+) */
+@media (min-width: 1200px) {
+    .memories-list {
+        gap: 50px;
+    }
+    
+    .popular-tutorials {
+        gap: 40px;
+    }
+}
+
+/* High-DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    body {
+        background-size: cover;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .links::after {
+        content: "";
+    }
+    
+    button {
+        border: 1px solid #000;
+        background: none;
+        color: #000;
+    }
 }
