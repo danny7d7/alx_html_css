@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero-section {
+    background: url('./d1597894d79386c83b9b/images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+header {
+    padding: 30px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    margin-left: 50px;
+}
+
+.nav-link {
+    margin-left: 40px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    justify-content: space-between;
+    max-width: 70%;
+    margin: 200px auto;
+    max-width: 750px;
+    
+}
+
+.title {
+    margin: 10px 0;
+}
+
+.under-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.call-btn {
+    border-radius: 50px;
+    padding: 20px;
+    width: 200px;
+    border: none;
+    color: white;
+    background-color: #FF6565;
+    margin: 70px 0;
+    font-weight: bolder;
+}
+.call-btn:hover {
+    cursor: pointer;
+    background-color: orangered;
+}
+
+.under-button {
+    font-size: 18px;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-section {
+    font-size: larger;
+    text-align: center;
+    background: white;
+    padding: 80px 0px;
+    max-width: 80vw;
+    margin: auto;
+}
+
+.four-logos {
+    padding: 60px;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+}
+
+.each-four-logos > img{
+    margin: 60px 90px;
+    width: 100px;
+    height: 100px;
+}
+
+.second-picture-section {
+    background: url(./d1597894d79386c83b9b/images/headphones_hero_2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Lorem {
+    padding: 10em 30em;
+    color: white;
+    align-items: center;
+    text-align: center; 
+    font-size: 17px;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
